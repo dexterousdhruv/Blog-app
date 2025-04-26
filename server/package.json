@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "generate": "npx prisma generate",
-    "build": "npm run generate && tsc --build",
+    "build": "npm install && npm run generate && tsc --build",
     "start": "npm run build && node ./dist/index.js",
     "build:dev": "tsc --build --watch",
     "start:dev": "node --watch ./dist/index.js",
