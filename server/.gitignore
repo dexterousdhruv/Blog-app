@@ -8,3 +8,5 @@ dist
 
 # But do NOT ignore example env
 !.env.example
+
+src
