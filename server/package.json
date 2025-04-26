@@ -4,11 +4,12 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "build": "npm install ",
-    "start": "npx prisma generate && tsc --build && node ./dist/index.js",
+    "generate": "npx prisma generate",
+    "build": "npm run generate && tsc --build",
+    "start": "npm run build && node ./dist/index.js",
     "build:dev": "tsc --build --watch",
     "start:dev": "node --watch ./dist/index.js",
-    "dev": "nodemon ./index.ts"
+    "dev": "npm run generate && nodemon ./index.ts"
   },
   "dependencies": {
     "@prisma/client": "^6.6.0",
