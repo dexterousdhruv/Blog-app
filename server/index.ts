@@ -18,7 +18,7 @@ app.use(express.json())
 app.use("/api/auth", authRouter)
 app.use("/api/posts", postRouter)
 
-
+ 
 app.listen(PORT, () => {
   console.log(`Yo! Server is running on port ${PORT} `)
 }) 
